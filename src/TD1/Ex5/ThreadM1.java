@@ -16,7 +16,7 @@ public class ThreadM1 extends Thread {
         {
             for(j = 0; j < 5; j++)
             {
-                System.out.print(tab[j]);
+                System.out.print(tab[j] + " ");
             }
             System.out.println();
         }
