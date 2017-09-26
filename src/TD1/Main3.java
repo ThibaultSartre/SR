@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Main3 {
     public static void main(String[] args) throws InterruptedException {
         final int NB_THREAD = 4;
-        int tab[] = new int[12];
+        int []tab = new int[12];
         MonThread3 mt = null;
         int i;
         ArrayList<MonThread3> listThread = new ArrayList<MonThread3>();

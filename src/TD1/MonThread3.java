@@ -5,7 +5,7 @@ package TD1;
  */
 public class MonThread3 implements Runnable {
     private int indice;
-    private int tab[];
+    private int []tab;
     public Thread T;
 
 
