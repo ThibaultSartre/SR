@@ -18,8 +18,8 @@ public class Prog1 {
 
         int[] T = R.litRegistre();
         System.out.println("Valeur final du registre");
-        for(int i = 0; i < T.length; i++){
-            System.out.println(T[i]);
+        for (int aT : T) {
+            System.out.println(aT);
         }
     }
 }
