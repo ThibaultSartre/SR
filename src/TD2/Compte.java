@@ -13,11 +13,11 @@ public class Compte {
         this.prenom = prenom;
         this.solde = solde;
     }
-    public synchronized void versement(){
+    public void versement(){
         solde = solde + 10;
     }
 
-    public synchronized void retrait(){
+    public void retrait(){
         solde = solde - 11;
     }
 
