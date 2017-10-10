@@ -1,6 +1,8 @@
 package TD2;
 
 
+import java.util.Arrays;
+
 /**
  * Created by thsartre on 10/10/2017.
  */
@@ -21,7 +23,6 @@ public class Thread3 extends Thread {
             }else{
                 compte.retrait();
             }
-
         }
     }
 }
