@@ -40,6 +40,6 @@ public class Main {
         System.out.println(compte.toString());
         System.out.println("Retrait : " + compte.getTrace().getRetrait());
         System.out.println("Versement : " + compte.getTrace().getVersement());
-        System.out.println("Tab " + Arrays.toString(compte.getTrace().getFile()));
+        System.out.println("Tab : " + Arrays.toString(compte.getTrace().getFile()));
     }
 }
