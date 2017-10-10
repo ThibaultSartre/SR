@@ -20,12 +20,12 @@ public class Compte {
         this.trace = new Trace();
     }
     public synchronized void versement(){
-        solde = solde + 10;
+        solde = solde + 1;
         trace.IncVersement();
     }
 
     public synchronized void retrait(){
-        solde = solde - 11;
+        solde = solde - 1;
         trace.IncRetrait();
     }
 
