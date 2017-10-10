@@ -26,5 +26,7 @@ public class Main {
         th4.join();
 
         System.out.println(compte.toString());
+        System.out.println("Retrait : " + compte.getTrace().getRetrait());
+        System.out.println("Versement : " + compte.getTrace().getVersement());
     }
 }

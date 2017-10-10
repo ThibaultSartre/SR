@@ -7,18 +7,26 @@ public class Compte {
     private String nom;
     private String prenom;
     private int solde;
+    private Trace trace;
+
+    public Trace getTrace() {
+        return trace;
+    }
 
     public Compte(String nom, String prenom, int solde) {
         this.nom = nom;
         this.prenom = prenom;
         this.solde = solde;
+        this.trace = new Trace();
     }
-    public void versement(){
+    public synchronized void versement(){
         solde = solde + 10;
+        trace.IncVersement();
     }
 
-    public void retrait(){
+    public synchronized void retrait(){
         solde = solde - 11;
+        trace.IncRetrait();
     }
 
     @Override
