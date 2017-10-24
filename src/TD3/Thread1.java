@@ -12,6 +12,13 @@ public class Thread1 extends Thread {
     }
 
     public void run(){
-
+        while(!isInterrupted()){
+            try {
+                sleep(100);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            nbr.incremente();
+        }
     }
 }
