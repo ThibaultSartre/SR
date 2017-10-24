@@ -8,18 +8,40 @@ public class Nombre {
 
     private int carre;
 
+    private boolean macondition;
+
     public Nombre() {
         this.n = 0;
         this.carre = 0;
+        this.macondition = false;
+
     }
 
-    public void incremente(){
+    public synchronized void incremente(){
+        while(!macondition){
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         n++;
         carre = n*n;
+        macondition = false;
+        notifyAll();
     }
 
     @Override
-    public String toString() {
+    public synchronized String toString() {
+        while(macondition){
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        macondition = true;
+        notifyAll();
         return "Nombre{" +
                 "n=" + n +
                 ", carre=" + carre +
