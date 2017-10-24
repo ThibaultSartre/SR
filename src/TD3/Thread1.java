@@ -14,7 +14,7 @@ public class Thread1 extends Thread {
     public void run(){
         while(!isInterrupted()){
             try {
-                sleep(100);
+                sleep(200);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
