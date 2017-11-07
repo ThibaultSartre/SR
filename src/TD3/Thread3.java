@@ -5,20 +5,21 @@ package TD3;
  */
 public class Thread3 extends Thread {
 
-    private Nombre nbr;
+    private Nombre2 nbr;
 
-    public Thread3(Nombre nbr) {
+    public Thread3(Nombre2 nbr) {
         this.nbr = nbr;
     }
 
     public void run(){
         while(!isInterrupted()){
             try {
-                sleep(150);
+                sleep(250);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
             nbr.calculeCarre();
+            nbr.th = 3;
         }
     }
 }

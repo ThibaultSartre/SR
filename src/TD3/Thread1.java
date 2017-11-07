@@ -5,9 +5,9 @@ package TD3;
  */
 public class Thread1 extends Thread {
 
-    private Nombre nbr;
+    private Nombre2 nbr;
 
-    public Thread1(Nombre nbr) {
+    public Thread1(Nombre2 nbr) {
         this.nbr = nbr;
     }
 
@@ -18,7 +18,8 @@ public class Thread1 extends Thread {
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
-            nbr.incremente();
+            nbr.calculeCarre();
+            nbr.th = 1;
         }
     }
 }

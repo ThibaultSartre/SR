@@ -10,7 +10,7 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        Nombre nbr = new Nombre();
+        Nombre2 nbr = new Nombre2();
         Thread1 th1 = new Thread1(nbr);
         Thread2 th2 = new Thread2(nbr);
         Thread3 th3 = new Thread3(nbr);
