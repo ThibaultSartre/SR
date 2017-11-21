@@ -37,11 +37,15 @@ public class SocketThread implements Runnable{
         String capitalizedSentence;
         // reception et envoi
         try {
-            clientSentence = entree.readLine();
+            do {
+                clientSentence = entree.readLine();
+                System.out.println(clientSentence);
+            }while(clientSentence != null);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        capitalizedSentence = clientSentence.toUpperCase() + "\n";
+        //capitalizedSentence = clientSentence.toUpperCase() + "\n";
+        capitalizedSentence = "HTTP/1.1 404 File Not Found \n Connection: Close \n";
         try {
             sortie.writeBytes(capitalizedSentence);
         } catch (IOException e) {
